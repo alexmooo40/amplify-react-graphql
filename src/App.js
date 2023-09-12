@@ -1,6 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
+function MyButton()
+{
+  function MyButton_onclic(e){
+    alert("you clic me :') ");
+    alert(e);
+  }
+  return (<button onClick={MyButton_onclic}> clic me</button>);
+}
+
 function App() {
   return (
     <div className="App">
@@ -9,6 +18,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <MyButton></MyButton>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -18,6 +28,7 @@ function App() {
           Learn React
         </a>
       </header>
+     
     </div>
   );
 }
